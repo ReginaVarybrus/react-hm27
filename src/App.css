@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  /* position: relative; */
 }
 
 .App-logo {
@@ -35,4 +36,33 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+
+.Chat-message {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  z-index: 0;
+}
+
+.Emergency-message {
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  border-radius: 10px;
+  top: calc(50% - 250px);
+  left: calc(50% - 250px);
+
+  background: rgb(227, 139, 139);
+  z-index: 10;
+}
+
+.Emergency-message div {
+  position: absolute;
+  top: 50%;
+  left: 35%;
+  background: #38788a;
+  color:antiquewhite;
+  /* width: 100%; */
 }

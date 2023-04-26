@@ -10,19 +10,16 @@ const WSProvider = ({ children }) => {
     const newSocket = io("http://127.0.0.1:4000", {
       transports: ["websocket"],
     });
-    newSocket.on("message", (msg) =>
-      setMessages((prevMessages) => [...prevMessages, msg])
-    );
+    newSocket.on("message", (msg) => {
+      setMessages((prevMessages) => [...prevMessages, msg]);
+    });
     setSocket(newSocket);
 
-    newSocket.on('ping', (msg) => {
+    newSocket.on('ping', () => {
       console.log('Приел пинг');
     });
 
-    // newSocket.on("connect", () => setStatus(true));  // handlers if needed
-    // newSocket.on("disconnect", () => setStatus(false));
-
-    return () => newSocket.close(); // close connection when unmount
+    return () => newSocket.close();
   }, []);
 
   const getSocketStatus = () => !!socket?.connected;
@@ -36,7 +33,7 @@ const WSProvider = ({ children }) => {
   const getContextValue = () => ({
     status: getSocketStatus(),
     messages,
-    sendMessage,
+    sendMessage
   });
 
   return (
