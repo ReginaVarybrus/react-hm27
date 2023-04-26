@@ -5,11 +5,11 @@ import WsEmrgMessage from "./components/WsEmrgMessage";
 
 const App = () => (
   <>
-    <WsEmrgProvider>
-      <WsEmrgMessage />
-    </WsEmrgProvider>
     <WSProvider>
-      <WsChat />
+      <WsEmrgProvider>
+        <WsChat />
+        <WsEmrgMessage />
+      </WsEmrgProvider>
     </WSProvider>
   </>
 );

@@ -1,6 +1,9 @@
+body {
+  background: #f9f9f9;
+}
+
 .App {
   text-align: center;
-  /* position: relative; */
 }
 
 .App-logo {
@@ -33,17 +36,48 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
 }
 
+input {
+  width: 300px;
+  height: 20px;
+  outline: none;
+  border: 2px solid #5aa9e6;
+  box-shadow: 0px 0px 5px 2px rgba(27, 27, 30, 0.2);
+  border-radius: 5px;
+  padding: 3px;
+}
+
+button {
+  width: 70px;
+  height: 30px;
+  margin-left: 10px;
+  background: #5aa9e6;
+  box-shadow: 0px 0px 5px 2px rgba(27, 27, 30, 0.2);
+  border: none;
+  border-radius: 5px;
+}
+
+button:hover {
+  background: #ffe45e;
+}
 
 .Chat-message {
   position: absolute;
   top: 10px;
   left: 10px;
   z-index: 0;
+}
+
+.Message {
+  background: #7fc8f86c;
+  height: 25px;
+  padding: 5px;
+  border-radius: 5px;
 }
 
 .Emergency-message {
@@ -53,16 +87,13 @@
   border-radius: 10px;
   top: calc(50% - 250px);
   left: calc(50% - 250px);
-
-  background: rgb(227, 139, 139);
+  background: #ff6392;
+  box-shadow: 0px 0px 17px 4px rgba(27, 27, 30, 0.2);
   z-index: 10;
 }
 
-.Emergency-message div {
+.Emergency-message p {
   position: absolute;
-  top: 50%;
-  left: 35%;
-  background: #38788a;
-  color:antiquewhite;
-  /* width: 100%; */
+  top: 240px;
+  left: 184px;
 }

@@ -8,9 +8,12 @@ const WsEmrgMessage = () => {
     const wsEmrcCtx = useContext(wsEmrgContext);
 
     return (
+        <>
+        {wsEmrcCtx.message && 
         <div className="Emergency-message">
-            <div>{wsEmrcCtx.message}</div>
-        </div>
+            <p>{wsEmrcCtx.message}</p>
+            </div>}
+        </>
     );
 };
 
